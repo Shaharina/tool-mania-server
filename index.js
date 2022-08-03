@@ -33,13 +33,13 @@ const verifyToken = (req, res, next) => {
 async function run() {
     try {
         await client.connect();
-        const productsCollection = client.db("tool_mine").collection("products");
-        const reviewsCollection = client.db("tool_mine").collection("reviews");
-        const userCollection = client.db("tool_mine").collection("users");
-        const ordersCollection = client.db("tool_mine").collection("order");
-        const paymentCollection = client.db("tool_mine").collection("payment");
-        const contactCollection = client.db("tool_mine").collection("contact");
-        const subscribeCollection = client.db("tool_mine").collection("subscribe");
+            const productsCollection = client.db("tool_mania").collection("products");
+        const reviewsCollection = client.db("tool_mania").collection("reviews");
+        const userCollection = client.db("tool_mania").collection("users");
+        const ordersCollection = client.db("tool_mania").collection("order");
+        const paymentCollection = client.db("tool_mania").collection("payment");
+        const contactCollection = client.db("tool_mania").collection("contact");
+        const subscribeCollection = client.db("tool_mania").collection("subscribe");
 
         const verifyAdmin = async (req, res, next) => {
             const requester = req.decoded.email;
